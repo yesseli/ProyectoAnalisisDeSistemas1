@@ -2,9 +2,9 @@ using System.Runtime.InteropServices;
 
 namespace interfazServicios
 {
-    public partial class Form1 : Form
+    public partial class form1 : Form
     {
-        public Form1()
+        public form1()
         {
             InitializeComponent();
         }
@@ -162,6 +162,11 @@ namespace interfazServicios
         {
             AbrirFormulario<FormPago>();
             btnPago.BackColor = Color.FromArgb(33, 85, 205);
+        }
+
+        private void panelFormularios_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
