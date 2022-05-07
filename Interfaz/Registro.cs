@@ -36,5 +36,10 @@ namespace interfazServicios
         {
 
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
