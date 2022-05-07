@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yessi\\source\\repos\\interfazServicios\\interfazServicios\\interfazServicios.csproj",
+      "projectUniqueName": "C:\\Users\\yessi\\Desktop\\Interfaz\\Interfaz\\interfazServicios.csproj",
       "projectName": "interfazServicios",
-      "projectPath": "C:\\Users\\yessi\\source\\repos\\interfazServicios\\interfazServicios\\interfazServicios.csproj",
+      "projectPath": "C:\\Users\\yessi\\Desktop\\Interfaz\\Interfaz\\interfazServicios.csproj",
       "packagesPath": "C:\\Users\\yessi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yessi\\source\\repos\\interfazServicios\\interfazServicios\\obj\\",
+      "outputPath": "C:\\Users\\yessi\\Desktop\\Interfaz\\Interfaz\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
