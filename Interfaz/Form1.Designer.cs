@@ -32,7 +32,6 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelFormularios = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnFormCliente = new System.Windows.Forms.Button();
             this.btnPago = new System.Windows.Forms.Button();
             this.btnEquipo = new System.Windows.Forms.Button();
             this.btnServicio = new System.Windows.Forms.Button();
@@ -43,7 +42,6 @@
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.btnInsumo = new System.Windows.Forms.Button();
             this.panelContenedor.SuspendLayout();
             this.panelFormularios.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -82,33 +80,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(194)))), ((int)(((byte)(255)))));
-            this.panel1.Controls.Add(this.btnFormCliente);
             this.panel1.Controls.Add(this.btnPago);
             this.panel1.Controls.Add(this.btnEquipo);
-            this.panel1.Controls.Add(this.btnInsumo);
             this.panel1.Controls.Add(this.btnServicio);
             this.panel1.Location = new System.Drawing.Point(-10, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(192, 468);
             this.panel1.TabIndex = 5;
-            // 
-            // btnFormCliente
-            // 
-            this.btnFormCliente.BackColor = System.Drawing.Color.Transparent;
-            this.btnFormCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFormCliente.FlatAppearance.BorderSize = 0;
-            this.btnFormCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnFormCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(244)))), ((int)(((byte)(255)))));
-            this.btnFormCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFormCliente.Font = new System.Drawing.Font("Gotham Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnFormCliente.ForeColor = System.Drawing.Color.White;
-            this.btnFormCliente.Location = new System.Drawing.Point(10, 26);
-            this.btnFormCliente.Name = "btnFormCliente";
-            this.btnFormCliente.Size = new System.Drawing.Size(182, 31);
-            this.btnFormCliente.TabIndex = 0;
-            this.btnFormCliente.Text = "Clientes";
-            this.btnFormCliente.UseVisualStyleBackColor = false;
-            this.btnFormCliente.Click += new System.EventHandler(this.btnFormCliente_Click);
             // 
             // btnPago
             // 
@@ -120,7 +98,7 @@
             this.btnPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPago.Font = new System.Drawing.Font("Gotham Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnPago.ForeColor = System.Drawing.Color.White;
-            this.btnPago.Location = new System.Drawing.Point(10, 299);
+            this.btnPago.Location = new System.Drawing.Point(10, 286);
             this.btnPago.Name = "btnPago";
             this.btnPago.Size = new System.Drawing.Size(182, 41);
             this.btnPago.TabIndex = 2;
@@ -138,7 +116,7 @@
             this.btnEquipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEquipo.Font = new System.Drawing.Font("Gotham Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEquipo.ForeColor = System.Drawing.Color.White;
-            this.btnEquipo.Location = new System.Drawing.Point(10, 91);
+            this.btnEquipo.Location = new System.Drawing.Point(10, 89);
             this.btnEquipo.Name = "btnEquipo";
             this.btnEquipo.Size = new System.Drawing.Size(182, 41);
             this.btnEquipo.TabIndex = 1;
@@ -156,7 +134,7 @@
             this.btnServicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnServicio.Font = new System.Drawing.Font("Gotham Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnServicio.ForeColor = System.Drawing.Color.White;
-            this.btnServicio.Location = new System.Drawing.Point(10, 161);
+            this.btnServicio.Location = new System.Drawing.Point(10, 168);
             this.btnServicio.Name = "btnServicio";
             this.btnServicio.Size = new System.Drawing.Size(182, 41);
             this.btnServicio.TabIndex = 4;
@@ -254,26 +232,7 @@
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // btnInsumo
-            // 
-            this.btnInsumo.BackColor = System.Drawing.Color.Transparent;
-            this.btnInsumo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnInsumo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInsumo.FlatAppearance.BorderSize = 0;
-            this.btnInsumo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnInsumo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(244)))), ((int)(((byte)(255)))));
-            this.btnInsumo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInsumo.Font = new System.Drawing.Font("Gotham Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnInsumo.ForeColor = System.Drawing.Color.White;
-            this.btnInsumo.Location = new System.Drawing.Point(10, 229);
-            this.btnInsumo.Name = "btnInsumo";
-            this.btnInsumo.Size = new System.Drawing.Size(182, 41);
-            this.btnInsumo.TabIndex = 2;
-            this.btnInsumo.Text = "Insumos";
-            this.btnInsumo.UseVisualStyleBackColor = false;
-            this.btnInsumo.Click += new System.EventHandler(this.btnInsumo_Click);
-            // 
-            // Form1
+            // form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -281,7 +240,7 @@
             this.Controls.Add(this.panelContenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(300, 300);
-            this.Name = "Form1";
+            this.Name = "form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -308,13 +267,11 @@
         private PictureBox btnRestaurar;
         private PictureBox btnMaximizar;
         private PictureBox btnMinimizar;
-        private Button btnFormCliente;
         private Label label1;
         private Button btnEquipo;
         private Button btnPago;
         private Button btnServicio;
         private PictureBox pictureBox1;
         private Panel panel1;
-        private Button btnInsumo;
     }
 }

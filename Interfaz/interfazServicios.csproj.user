@@ -10,7 +10,7 @@
     <Compile Update="Registro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form4.cs">
+    <Compile Update="Equipo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Form5.cs">

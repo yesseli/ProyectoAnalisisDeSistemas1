@@ -29,41 +29,33 @@
         private void InitializeComponent()
         {
             this.panelFormularios = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelFormularios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelFormularios
             // 
             this.panelFormularios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(249)))), ((int)(((byte)(253)))));
-            this.panelFormularios.Controls.Add(this.textBox1);
             this.panelFormularios.Controls.Add(this.pictureBox3);
             this.panelFormularios.Controls.Add(this.pictureBox2);
             this.panelFormularios.Controls.Add(this.pictureBox1);
-            this.panelFormularios.Controls.Add(this.lblTitulo);
-            this.panelFormularios.Controls.Add(this.btnVolver);
+            this.panelFormularios.Controls.Add(this.panel2);
             this.panelFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFormularios.Location = new System.Drawing.Point(0, 0);
             this.panelFormularios.Name = "panelFormularios";
             this.panelFormularios.Size = new System.Drawing.Size(694, 453);
             this.panelFormularios.TabIndex = 1;
             this.panelFormularios.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFormularios_Paint);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(175, 123);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(361, 27);
-            this.textBox1.TabIndex = 4;
             // 
             // pictureBox3
             // 
@@ -96,27 +88,37 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTitulo.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.lblTitulo.Location = new System.Drawing.Point(289, 27);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(147, 54);
-            this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Cliente";
-            // 
             // btnVolver
             // 
             this.btnVolver.Image = global::interfazServicios.Properties.Resources._4;
-            this.btnVolver.Location = new System.Drawing.Point(5, 5);
+            this.btnVolver.Location = new System.Drawing.Point(4, 4);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(42, 43);
             this.btnVolver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnVolver.TabIndex = 0;
             this.btnVolver.TabStop = false;
             this.btnVolver.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(194)))), ((int)(((byte)(255)))));
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.btnVolver);
+            this.panel2.Location = new System.Drawing.Point(1, 1);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(690, 74);
+            this.panel2.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Product Sans", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(102, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(202, 59);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Clientes";
             // 
             // formCliente
             // 
@@ -127,11 +129,12 @@
             this.Name = "formCliente";
             this.Text = "Form2";
             this.panelFormularios.ResumeLayout(false);
-            this.panelFormularios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -139,10 +142,10 @@
         #endregion
         private Panel panelFormularios;
         private PictureBox btnVolver;
-        private Label lblTitulo;
         private PictureBox pictureBox1;
-        private TextBox textBox1;
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
+        private Panel panel2;
+        private Label label1;
     }
 }
