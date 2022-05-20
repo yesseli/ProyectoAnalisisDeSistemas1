@@ -10,29 +10,11 @@ using System.Windows.Forms;
 
 namespace interfazServicios
 {
-    public partial class FormPago : Form
+    public partial class Form3 : Form
     {
-        public FormPago()
+        public Form3()
         {
             InitializeComponent();
-        }
-
-        private void lblTitulo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnVolver_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Size = new Size(712, 32);
-            this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
-                               (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -40,12 +22,51 @@ namespace interfazServicios
 
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            Size = new Size(200, 200);
             this.Close();
-            Size = new Size(712, 468);
             this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
                                (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
+           
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

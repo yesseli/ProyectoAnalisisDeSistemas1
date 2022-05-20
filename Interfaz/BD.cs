@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
+//using MySql.Data.MySqlClient;
 
 namespace interfazServicios
 {
     public class BD
     {
-        public static MySqlConnection ObtenerConexion()
-        {
+        //public static MySqlConnection ObtenerConexion()
+       // {
 
-            MySqlConnection conectar = new MySqlConnection(“server = 127.0.0.1; database = Tutorial; Uid = root; pwd =;”);
+           // MySqlConnection conectar = new MySqlConnection(“server = 127.0.0.1; database = Tutorial; Uid = root; pwd =;”);
 
-            conectar.Open();
+            //conectar.Open();
 
-            return conectar;
-        }
+           // return conectar;
+        //}
     }
 }

@@ -43,8 +43,8 @@ namespace interfazServicios
         }
 
         private void CloseForms(object sender, FormClosedEventArgs e){
-            if (Application.OpenForms["Form2"] == null)
-                btnFormCliente.BackColor = Color.Transparent;
+           // if (Application.OpenForms["Form2"] == null)
+                //btnFormCliente.BackColor = Color.Transparent;
         }
 
         private void panelContenedor_Paint(object sender, PaintEventArgs e)
@@ -132,7 +132,7 @@ namespace interfazServicios
         private void btnFormCliente_Click(object sender, EventArgs e)
         {
             AbrirFormulario<formCliente>();
-            btnFormCliente.BackColor = Color.FromArgb(33,85,205);
+           // btnFormCliente.BackColor = Color.FromArgb(33,85,205);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -142,29 +142,43 @@ namespace interfazServicios
 
         private void btnEquipo_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<FormEquipo>();
+            AbrirFormulario<Form3>();
             btnEquipo.BackColor = Color.FromArgb(33, 85, 205);
+            Size = new Size(965, 732);
+            this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
+                          (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
         }
 
         private void btnServicio_Click(object sender, EventArgs e)
         {
             AbrirFormulario<formServicio>();
             btnServicio.BackColor = Color.FromArgb(33, 85, 205);
+            Size = new Size(1164, 738);
+            this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
+                          (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
         }
 
         private void btnInsumo_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FormIsumo>();
-            btnInsumo.BackColor = Color.FromArgb(33, 85, 205);
+            //btnInsumo.BackColor = Color.FromArgb(33, 85, 205);
         }
 
         private void btnPago_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FormPago>();
             btnPago.BackColor = Color.FromArgb(33, 85, 205);
+            Size = new Size(497, 826);
+            this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
+                               (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
         }
 
         private void panelFormularios_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelFormularios_Paint_1(object sender, PaintEventArgs e)
         {
 
         }

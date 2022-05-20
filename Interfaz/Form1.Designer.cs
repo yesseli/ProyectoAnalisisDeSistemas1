@@ -76,6 +76,7 @@
             this.panelFormularios.Name = "panelFormularios";
             this.panelFormularios.Size = new System.Drawing.Size(712, 468);
             this.panelFormularios.TabIndex = 2;
+            this.panelFormularios.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFormularios_Paint_1);
             // 
             // panel1
             // 
@@ -96,9 +97,9 @@
             this.btnPago.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnPago.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(244)))), ((int)(((byte)(255)))));
             this.btnPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPago.Font = new System.Drawing.Font("Gotham Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPago.Font = new System.Drawing.Font("Gotham Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnPago.ForeColor = System.Drawing.Color.White;
-            this.btnPago.Location = new System.Drawing.Point(10, 286);
+            this.btnPago.Location = new System.Drawing.Point(10, 351);
             this.btnPago.Name = "btnPago";
             this.btnPago.Size = new System.Drawing.Size(182, 41);
             this.btnPago.TabIndex = 2;
@@ -114,9 +115,9 @@
             this.btnEquipo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnEquipo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(244)))), ((int)(((byte)(255)))));
             this.btnEquipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEquipo.Font = new System.Drawing.Font("Gotham Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnEquipo.Font = new System.Drawing.Font("Gotham Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEquipo.ForeColor = System.Drawing.Color.White;
-            this.btnEquipo.Location = new System.Drawing.Point(10, 89);
+            this.btnEquipo.Location = new System.Drawing.Point(10, 74);
             this.btnEquipo.Name = "btnEquipo";
             this.btnEquipo.Size = new System.Drawing.Size(182, 41);
             this.btnEquipo.TabIndex = 1;
@@ -132,9 +133,9 @@
             this.btnServicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnServicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(244)))), ((int)(((byte)(255)))));
             this.btnServicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnServicio.Font = new System.Drawing.Font("Gotham Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnServicio.Font = new System.Drawing.Font("Gotham Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnServicio.ForeColor = System.Drawing.Color.White;
-            this.btnServicio.Location = new System.Drawing.Point(10, 168);
+            this.btnServicio.Location = new System.Drawing.Point(10, 201);
             this.btnServicio.Name = "btnServicio";
             this.btnServicio.Size = new System.Drawing.Size(182, 41);
             this.btnServicio.TabIndex = 4;
@@ -242,7 +243,7 @@
             this.MinimumSize = new System.Drawing.Size(300, 300);
             this.Name = "form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelContenedor.ResumeLayout(false);
             this.panelFormularios.ResumeLayout(false);

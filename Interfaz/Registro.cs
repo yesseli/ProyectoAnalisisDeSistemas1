@@ -19,7 +19,11 @@ namespace interfazServicios
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
+            
             this.Close();
+            Size = new Size(712, 468);
+            this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
+                               (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
         }
 
         private void lblTitulo_Click(object sender, EventArgs e)
