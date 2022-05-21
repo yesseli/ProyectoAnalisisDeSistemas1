@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,14 +10,21 @@ namespace interfazServicios
 {
     public class BD
     {
-        //public static MySqlConnection ObtenerConexion()
-       // {
+        public static MySqlConnection Conexion()
+        {
+            String cadenaConexion = "Database = larousee; Data Source= localhost;  User Id = root; Password = pass.123";
 
-           // MySqlConnection conectar = new MySqlConnection(“server = 127.0.0.1; database = Tutorial; Uid = root; pwd =;”);
-
-            //conectar.Open();
-
-           // return conectar;
-        //}
+            try
+            {
+                MySqlConnection conectar = new MySqlConnection(cadenaConexion);
+                return conectar;
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+                return null;
+            }
+            
+        }
     }
 }

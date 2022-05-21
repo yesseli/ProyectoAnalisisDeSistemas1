@@ -29,141 +29,139 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.panelchilero1 = new interfazServicios.Panelchilero();
+            this.button3 = new System.Windows.Forms.Button();
+            this.txtArticulos = new System.Windows.Forms.RichTextBox();
+            this.txtMotivo = new System.Windows.Forms.RichTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.txtTipo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.panelchilero1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
-            this.panel1.Controls.Add(this.richTextBox3);
-            this.panel1.Controls.Add(this.richTextBox2);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.richTextBox1);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.panelchilero1);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1166, 691);
+            this.panel1.Size = new System.Drawing.Size(550, 776);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // richTextBox3
+            // panelchilero1
             // 
-            this.richTextBox3.Location = new System.Drawing.Point(815, 182);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(265, 126);
-            this.richTextBox3.TabIndex = 16;
-            this.richTextBox3.Text = "";
+            this.panelchilero1.BackColor = System.Drawing.Color.White;
+            this.panelchilero1.ColorDeAbajo = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(254)))), ((int)(((byte)(245)))));
+            this.panelchilero1.Colordearriba1 = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.panelchilero1.Controls.Add(this.button3);
+            this.panelchilero1.Controls.Add(this.txtArticulos);
+            this.panelchilero1.Controls.Add(this.txtMotivo);
+            this.panelchilero1.Controls.Add(this.label6);
+            this.panelchilero1.Controls.Add(this.label4);
+            this.panelchilero1.Controls.Add(this.txtMarca);
+            this.panelchilero1.Controls.Add(this.txtTipo);
+            this.panelchilero1.Controls.Add(this.label3);
+            this.panelchilero1.Controls.Add(this.label2);
+            this.panelchilero1.Controls.Add(this.label1);
+            this.panelchilero1.Controls.Add(this.txtNumero);
+            this.panelchilero1.Controls.Add(this.txtNombreCliente);
+            this.panelchilero1.Degradado = 30F;
+            this.panelchilero1.ForeColor = System.Drawing.Color.Black;
+            this.panelchilero1.Location = new System.Drawing.Point(32, 103);
+            this.panelchilero1.Name = "panelchilero1";
+            this.panelchilero1.Radiodelborde = 30;
+            this.panelchilero1.Size = new System.Drawing.Size(480, 646);
+            this.panelchilero1.TabIndex = 17;
             // 
-            // richTextBox2
+            // button3
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(281, 395);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(432, 126);
-            this.richTextBox2.TabIndex = 16;
-            this.richTextBox2.Text = "";
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(207)))), ((int)(((byte)(252)))));
+            this.button3.Font = new System.Drawing.Font("Product Sans", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.button3.Location = new System.Drawing.Point(58, 500);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(362, 102);
+            this.button3.TabIndex = 23;
+            this.button3.Text = "Registrar";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label5
+            // txtArticulos
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Product Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(194)))), ((int)(((byte)(255)))));
-            this.label5.Location = new System.Drawing.Point(81, 241);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(187, 25);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Detalles del Equipo";
+            this.txtArticulos.Location = new System.Drawing.Point(59, 425);
+            this.txtArticulos.Name = "txtArticulos";
+            this.txtArticulos.Size = new System.Drawing.Size(361, 60);
+            this.txtArticulos.TabIndex = 16;
+            this.txtArticulos.Text = "";
+            // 
+            // txtMotivo
+            // 
+            this.txtMotivo.Location = new System.Drawing.Point(59, 204);
+            this.txtMotivo.Name = "txtMotivo";
+            this.txtMotivo.Size = new System.Drawing.Size(361, 74);
+            this.txtMotivo.TabIndex = 16;
+            this.txtMotivo.Text = "";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Product Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(194)))), ((int)(((byte)(255)))));
-            this.label6.Location = new System.Drawing.Point(650, 182);
+            this.label6.Location = new System.Drawing.Point(59, 385);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(149, 25);
             this.label6.TabIndex = 13;
             this.label6.Text = "Artículos Extra";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(281, 241);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(265, 126);
-            this.richTextBox1.TabIndex = 14;
-            this.richTextBox1.Text = "";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Product Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(194)))), ((int)(((byte)(255)))));
-            this.label4.Location = new System.Drawing.Point(81, 395);
+            this.label4.Location = new System.Drawing.Point(59, 165);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(180, 25);
             this.label4.TabIndex = 13;
             this.label4.Text = "Motivo de Entrega";
             // 
-            // textBox4
+            // txtMarca
             // 
-            this.textBox4.Location = new System.Drawing.Point(479, 182);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.PlaceholderText = "Ej. HP";
-            this.textBox4.Size = new System.Drawing.Size(135, 27);
-            this.textBox4.TabIndex = 12;
+            this.txtMarca.Location = new System.Drawing.Point(252, 119);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.PlaceholderText = "Ej. HP";
+            this.txtMarca.Size = new System.Drawing.Size(168, 27);
+            this.txtMarca.TabIndex = 12;
             // 
-            // textBox3
+            // txtTipo
             // 
-            this.textBox3.Location = new System.Drawing.Point(315, 182);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PlaceholderText = "Ej. Impresora";
-            this.textBox3.Size = new System.Drawing.Size(142, 27);
-            this.textBox3.TabIndex = 12;
+            this.txtTipo.Location = new System.Drawing.Point(59, 119);
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.PlaceholderText = "Ej. Impresora";
+            this.txtTipo.Size = new System.Drawing.Size(156, 27);
+            this.txtTipo.TabIndex = 12;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Product Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(194)))), ((int)(((byte)(255)))));
-            this.label3.Location = new System.Drawing.Point(81, 182);
+            this.label3.Location = new System.Drawing.Point(59, 80);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(228, 25);
             this.label3.TabIndex = 11;
@@ -174,7 +172,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Product Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(194)))), ((int)(((byte)(255)))));
-            this.label2.Location = new System.Drawing.Point(650, 120);
+            this.label2.Location = new System.Drawing.Point(59, 302);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(194, 25);
             this.label2.TabIndex = 10;
@@ -185,11 +183,26 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Product Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(194)))), ((int)(((byte)(255)))));
-            this.label1.Location = new System.Drawing.Point(81, 118);
+            this.label1.Location = new System.Drawing.Point(59, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(156, 25);
             this.label1.TabIndex = 3;
             this.label1.Text = "Nombre Cliente";
+            // 
+            // txtNumero
+            // 
+            this.txtNumero.Location = new System.Drawing.Point(59, 341);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(361, 27);
+            this.txtNumero.TabIndex = 8;
+            // 
+            // txtNombreCliente
+            // 
+            this.txtNombreCliente.Location = new System.Drawing.Point(59, 50);
+            this.txtNombreCliente.Name = "txtNombreCliente";
+            this.txtNombreCliente.Size = new System.Drawing.Size(361, 27);
+            this.txtNombreCliente.TabIndex = 7;
+            this.txtNombreCliente.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // panel2
             // 
@@ -224,70 +237,23 @@
             this.btnVolver.TabStop = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(850, 120);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(169, 27);
-            this.textBox2.TabIndex = 8;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(253, 118);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(361, 27);
-            this.textBox1.TabIndex = 7;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::interfazServicios.Properties.Resources.Registrar_2_;
-            this.pictureBox3.Location = new System.Drawing.Point(548, 573);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(125, 62);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::interfazServicios.Properties.Resources.Registrar_1_;
-            this.pictureBox2.Location = new System.Drawing.Point(382, 573);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(136, 62);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::interfazServicios.Properties.Resources.Registrar;
-            this.pictureBox1.Location = new System.Drawing.Point(228, 573);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 67);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // formServicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1166, 691);
+            this.ClientSize = new System.Drawing.Size(550, 776);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "formServicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "form3";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelchilero1.ResumeLayout(false);
+            this.panelchilero1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,22 +264,19 @@
         private Panel panel1;
         private PictureBox btnVolver;
         private Label lblTitulo;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox1;
-        private TextBox textBox1;
+        private TextBox txtNombreCliente;
         private Panel panel2;
-        private TextBox textBox2;
+        private TextBox txtNumero;
         private Label label3;
         private Label label2;
         private Label label1;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private RichTextBox richTextBox1;
+        private TextBox txtMarca;
+        private TextBox txtTipo;
         private Label label4;
-        private RichTextBox richTextBox3;
-        private RichTextBox richTextBox2;
-        private Label label5;
+        private RichTextBox txtArticulos;
+        private RichTextBox txtMotivo;
         private Label label6;
+        private Panelchilero panelchilero1;
+        private Button button3;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,16 +20,27 @@ namespace interfazServicios
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            
+
             this.Close();
-            Size = new Size(712, 468);
+           // form1 form = new form1();
+          //  form.Size = new Size(712, 468);
+           // form.Show();
             this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
                                (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
+            this.Size = new Size(712, 468);
+
+
+
+            // this.Hide();
+            //var form1 = new form1();
+            // form1.Closed += (s, args) => this.Close();
+            // form1.Show();
+
         }
 
         private void lblTitulo_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -44,6 +56,65 @@ namespace interfazServicios
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //De aqui toma los valores de los textbox
+            String nombreCliente = txtNombreCliente.Text;
+            String tipo = txtTipo.Text;
+            String marca = txtMarca.Text;
+            String motivo = txtMotivo.Text;
+            String numero = txtNumero.Text;
+            String articulos = txtArticulos.Text;
+            String estado = "1";
+            String diagnostico = "muy malo";
+            // aqui hace l;a consulta en la base de datos, se une en un string pa mandarselo despues
+            // Nota, el default es porque el idcliente es autoincrementable y asi me ahorro programar un monton xd
+            String querySQL1 = "USE larousee; INSERT INTO cliente VALUES (default,'" + nombreCliente + "', '" + numero + "') ";
+            String querySQL2 = "USE larousee; INSERT INTO equipo VALUES(default, '" + tipo+marca+"', '"+motivo+"', '"+estado+"', '"+diagnostico+"', '"+articulos+"', (SELECT  idCliente FROM cliente ORDER BY idCliente DESC LIMIT 1), (SELECT  idCliente FROM cliente ORDER BY idCliente DESC LIMIT 1))";
+            // aqui toma de la clase de la conexion a la base de datos un objeto y su metodo
+            MySqlConnection conexionbd = BD.Conexion();
+            conexionbd.Open();
+
+
+            // aqui es donde hace la consulta, esta en un try catch por si hay un error en la consulta
+            //  ＼(ᵔ •ω• ᵔ)/
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(querySQL1, conexionbd);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Resgistro Guardado");
+
+                try
+                {
+                    MySqlCommand comando1 = new MySqlCommand(querySQL2, conexionbd);
+                    comando1.ExecuteNonQuery();
+                    MessageBox.Show("Resgistro Guardado 2");
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Error al guardar: " + ex.Message);
+                }
+                finally
+                {
+                    conexionbd.Close();
+                }
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Error al guardar: "+ex.Message);
+            }
+            finally
+            {
+                conexionbd.Close();
+            }
         }
     }
 }

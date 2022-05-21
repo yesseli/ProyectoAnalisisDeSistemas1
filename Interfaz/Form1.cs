@@ -31,9 +31,10 @@ namespace interfazServicios
                 formulario.Dock = DockStyle.Fill;
                 panelFormularios.Controls.Add(formulario);
                 panelFormularios.Tag = formulario;
-                formulario.Show();
+               // formulario.Show();
                 formulario.BringToFront();
                 formulario.FormClosed += new FormClosedEventHandler(CloseForms);
+                formulario.Show();
             }
             //si el formulario/instancia existe
             else
@@ -153,9 +154,17 @@ namespace interfazServicios
         {
             AbrirFormulario<formServicio>();
             btnServicio.BackColor = Color.FromArgb(33, 85, 205);
-            Size = new Size(1164, 738);
+            Size = new Size(568, 915);
             this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
                           (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
+
+
+
+
+           // this.Hide();
+          //  var formServicio = new formServicio();
+            //formServicio.Closed += (s, args) => this.Close();
+           // formServicio.Show();
         }
 
         private void btnInsumo_Click(object sender, EventArgs e)
