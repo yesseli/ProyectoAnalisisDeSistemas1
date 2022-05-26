@@ -78,3 +78,15 @@ C:\Users\rafae\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\bin\Debug\net6.
 C:\Users\rafae\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\bin\Debug\net6.0-windows\K4os.Hash.xxHash.dll
 C:\Users\rafae\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\bin\Debug\net6.0-windows\MySql.Data.xml
 C:\Users\rafae\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\obj\Debug\net6.0-windows\interfazServicios.csproj.CopyComplete
+C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\obj\Debug\net6.0-windows\interfazServicios.Form3.resources
+C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\bin\Debug\net6.0-windows\Google.Protobuf.dll
+C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\bin\Debug\net6.0-windows\K4os.Compression.LZ4.dll
+C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\bin\Debug\net6.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\bin\Debug\net6.0-windows\K4os.Hash.xxHash.dll
+C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\bin\Debug\net6.0-windows\MySql.Data.dll
+C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\bin\Debug\net6.0-windows\Ubiety.Dns.Core.dll
+C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\bin\Debug\net6.0-windows\ZstdNet.dll
+C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\bin\Debug\net6.0-windows\MySql.Web.dll
+C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\bin\Debug\net6.0-windows\MySql.Web.xml
+C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\obj\Debug\net6.0-windows\interfazServicios.csproj.CopyComplete

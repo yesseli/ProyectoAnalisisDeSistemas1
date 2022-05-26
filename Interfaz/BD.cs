@@ -1,10 +1,10 @@
-﻿using MySql.Data.MySqlClient;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using MySql.Data.MySqlClient;
+using MySql.Data.MySqlClient;
 
 namespace interfazServicios
 {
@@ -12,7 +12,7 @@ namespace interfazServicios
     {
         public static MySqlConnection Conexion()
         {
-            String cadenaConexion = "Database = larousee; Data Source= localhost;  User Id = root; Password = pass.123";
+            String cadenaConexion = "Database = larousee; Data Source= localhost;  User Id = root; Password = Pass.123";
 
             try
             {
