@@ -58,6 +58,11 @@ namespace interfazServicios
 
         private void button1_Click(object sender, EventArgs e)
         {
+            String nEquipo =
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
 
         }
     }

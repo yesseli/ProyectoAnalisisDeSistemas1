@@ -91,13 +91,13 @@ namespace interfazServicios
             {
                 MySqlCommand comando = new MySqlCommand(querySQL1, conexionbd);
                 comando.ExecuteNonQuery();
-                MessageBox.Show("Resgistro Guardado");
+                MessageBox.Show("Cliente Registrado");
 
                 try
                 {
                     MySqlCommand comando1 = new MySqlCommand(querySQL2, conexionbd);
                     comando1.ExecuteNonQuery();
-                    MessageBox.Show("Resgistro Guardado 2");
+                    MessageBox.Show("Equipo Registrado");
                 }
                 catch (MySqlException ex)
                 {

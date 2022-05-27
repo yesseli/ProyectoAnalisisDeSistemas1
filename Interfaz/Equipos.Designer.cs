@@ -31,15 +31,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelchilero3 = new interfazServicios.Panelchilero();
             this.button2 = new System.Windows.Forms.Button();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.txtNumeroInsumo = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panelchilero1 = new interfazServicios.Panelchilero();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPrecioInsumo = new System.Windows.Forms.RichTextBox();
+            this.txtNombreInsumo = new System.Windows.Forms.RichTextBox();
+            this.txtNEquipo = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.PictureBox();
@@ -50,6 +50,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelchilero3.SuspendLayout();
             this.panelchilero1.SuspendLayout();
@@ -69,7 +70,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(949, 685);
+            this.panel1.Size = new System.Drawing.Size(984, 685);
             this.panel1.TabIndex = 1;
             // 
             // panelchilero3
@@ -78,7 +79,7 @@
             this.panelchilero3.ColorDeAbajo = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panelchilero3.Colordearriba1 = System.Drawing.Color.Red;
             this.panelchilero3.Controls.Add(this.button2);
-            this.panelchilero3.Controls.Add(this.richTextBox2);
+            this.panelchilero3.Controls.Add(this.txtNumeroInsumo);
             this.panelchilero3.Controls.Add(this.label4);
             this.panelchilero3.Degradado = 30F;
             this.panelchilero3.ForeColor = System.Drawing.Color.Black;
@@ -99,14 +100,14 @@
             this.button2.Text = "Eliminar";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // richTextBox2
+            // txtNumeroInsumo
             // 
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox2.Location = new System.Drawing.Point(40, 111);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(169, 25);
-            this.richTextBox2.TabIndex = 16;
-            this.richTextBox2.Text = "Numero del insumo";
+            this.txtNumeroInsumo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNumeroInsumo.Location = new System.Drawing.Point(40, 111);
+            this.txtNumeroInsumo.Name = "txtNumeroInsumo";
+            this.txtNumeroInsumo.Size = new System.Drawing.Size(169, 25);
+            this.txtNumeroInsumo.TabIndex = 16;
+            this.txtNumeroInsumo.Text = "Numero del insumo";
             // 
             // label4
             // 
@@ -129,9 +130,9 @@
             this.panelchilero1.Controls.Add(this.button1);
             this.panelchilero1.Controls.Add(this.label1);
             this.panelchilero1.Controls.Add(this.label5);
-            this.panelchilero1.Controls.Add(this.richTextBox4);
-            this.panelchilero1.Controls.Add(this.richTextBox1);
-            this.panelchilero1.Controls.Add(this.textBox1);
+            this.panelchilero1.Controls.Add(this.txtPrecioInsumo);
+            this.panelchilero1.Controls.Add(this.txtNombreInsumo);
+            this.panelchilero1.Controls.Add(this.txtNEquipo);
             this.panelchilero1.Degradado = 90F;
             this.panelchilero1.ForeColor = System.Drawing.Color.Black;
             this.panelchilero1.Location = new System.Drawing.Point(42, 126);
@@ -178,31 +179,31 @@
             this.label5.Text = "Nuevo Insumo";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // richTextBox4
+            // txtPrecioInsumo
             // 
-            this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox4.Location = new System.Drawing.Point(288, 146);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(108, 29);
-            this.richTextBox4.TabIndex = 19;
-            this.richTextBox4.Text = "Precio";
+            this.txtPrecioInsumo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPrecioInsumo.Location = new System.Drawing.Point(288, 146);
+            this.txtPrecioInsumo.Name = "txtPrecioInsumo";
+            this.txtPrecioInsumo.Size = new System.Drawing.Size(108, 29);
+            this.txtPrecioInsumo.TabIndex = 19;
+            this.txtPrecioInsumo.Text = "Precio";
             // 
-            // richTextBox1
+            // txtNombreInsumo
             // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Location = new System.Drawing.Point(35, 146);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(234, 29);
-            this.richTextBox1.TabIndex = 14;
-            this.richTextBox1.Text = "Nombre insumo";
+            this.txtNombreInsumo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombreInsumo.Location = new System.Drawing.Point(35, 146);
+            this.txtNombreInsumo.Name = "txtNombreInsumo";
+            this.txtNombreInsumo.Size = new System.Drawing.Size(234, 29);
+            this.txtNombreInsumo.TabIndex = 14;
+            this.txtNombreInsumo.Text = "Nombre insumo";
             // 
-            // textBox1
+            // txtNEquipo
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(35, 58);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(361, 20);
-            this.textBox1.TabIndex = 7;
+            this.txtNEquipo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNEquipo.Location = new System.Drawing.Point(35, 58);
+            this.txtNEquipo.Name = "txtNEquipo";
+            this.txtNEquipo.Size = new System.Drawing.Size(361, 20);
+            this.txtNEquipo.TabIndex = 7;
             // 
             // panel2
             // 
@@ -242,6 +243,7 @@
             this.panelchilero2.BackColor = System.Drawing.Color.White;
             this.panelchilero2.ColorDeAbajo = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.panelchilero2.Colordearriba1 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(233)))), ((int)(((byte)(255)))));
+            this.panelchilero2.Controls.Add(this.button3);
             this.panelchilero2.Controls.Add(this.textBox4);
             this.panelchilero2.Controls.Add(this.richTextBox5);
             this.panelchilero2.Controls.Add(this.textBox3);
@@ -253,7 +255,7 @@
             this.panelchilero2.Location = new System.Drawing.Point(485, 126);
             this.panelchilero2.Name = "panelchilero2";
             this.panelchilero2.Radiodelborde = 100;
-            this.panelchilero2.Size = new System.Drawing.Size(419, 496);
+            this.panelchilero2.Size = new System.Drawing.Size(448, 496);
             this.panelchilero2.TabIndex = 21;
             // 
             // textBox4
@@ -315,11 +317,26 @@
             this.textBox2.TabIndex = 8;
             this.textBox2.Text = "Numero Equipo";
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button3.BackgroundImage = global::interfazServicios.Properties.Resources.busqueda;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Font = new System.Drawing.Font("Product Sans", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(361, 23);
+            this.button3.Name = "button3";
+            this.button3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button3.Size = new System.Drawing.Size(60, 60);
+            this.button3.TabIndex = 21;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(949, 685);
+            this.ClientSize = new System.Drawing.Size(984, 685);
             this.Controls.Add(this.panel1);
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -348,13 +365,13 @@
         private Label lblTitulo;
         private PictureBox btnVolver;
         private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtNEquipo;
         private TextBox textBox3;
-        private RichTextBox richTextBox1;
-        private RichTextBox richTextBox4;
+        private RichTextBox txtNombreInsumo;
+        private RichTextBox txtPrecioInsumo;
         private Label label1;
         private Label label5;
-        private RichTextBox richTextBox2;
+        private RichTextBox txtNumeroInsumo;
         private Panelchilero panelchilero1;
         private Panelchilero panelchilero2;
         private Panelchilero panelchilero3;
@@ -363,5 +380,6 @@
         private Button button1;
         private TextBox textBox4;
         private RichTextBox richTextBox5;
+        private Button button3;
     }
 }
