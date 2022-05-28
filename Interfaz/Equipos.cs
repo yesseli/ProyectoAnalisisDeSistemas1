@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -59,12 +60,57 @@ namespace interfazServicios
         private void button1_Click(object sender, EventArgs e)
         {
             String nEquipo = txtNEquipo.Text;
-            String nombreInsumo = 
+            String nombreInsumo = txtNombreInsumo.Text;
+            String precioInsumo = txtPrecioInsumo.Text;
+
+            String querySQL3 = "USE larousee; INSERT INTO Insumo VALUES (default,'" + nombreInsumo + "', '" + precioInsumo + "' , '"+nEquipo+"') ";
+            MySqlConnection conexionbd = BD.Conexion();
+            conexionbd.Open();
+
+            try
+            {
+                MySqlCommand comando1 = new MySqlCommand(querySQL3, conexionbd);
+                comando1.ExecuteNonQuery();
+                MessageBox.Show("Insumo Registrado");
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Error al guardar: " + ex.Message);
+            }
+            finally
+            {
+                conexionbd.Close();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            String nEquipo = txtNEquipo.Text;
+            String nInsumo = txtNumeroInsumo.Text;
+            String querySQL3 = "USE larousee; DELETE FROM Insumo WHERE equipo_idEquipo = '" + nEquipo + "' AND idInsumo = '"+nInsumo+"'";
+            MySqlConnection conexionbd = BD.Conexion();
+            conexionbd.Open();
+
+            try
+            {
+                MySqlCommand comando1 = new MySqlCommand(querySQL3, conexionbd);
+                comando1.ExecuteNonQuery();
+                MessageBox.Show("Insumo Eliminado");
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Error al eliminar: " + ex.Message);
+            }
+            finally
+            {
+                conexionbd.Close();
+            }
+        }
     }
-}
+    }
+

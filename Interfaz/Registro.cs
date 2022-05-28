@@ -79,7 +79,7 @@ namespace interfazServicios
             // aqui hace l;a consulta en la base de datos, se une en un string pa mandarselo despues
             // Nota, el default es porque el idcliente es autoincrementable y asi me ahorro programar un monton xd
             String querySQL1 = "USE larousee; INSERT INTO cliente VALUES (default,'" + nombreCliente + "', '" + numero + "') ";
-            String querySQL2 = "USE larousee; INSERT INTO equipo VALUES(default, '" + tipo+"','"+marca+"', '"+modelo+"','"+detalles+"', '"+motivo+"', '"+estado+"', '"+diagnostico+"', '"+articulos+"', (SELECT  idCliente FROM cliente ORDER BY idCliente DESC LIMIT 1), (SELECT  idCliente FROM cliente ORDER BY idCliente DESC LIMIT 1))";
+            String querySQL2 = "USE larousee; INSERT INTO equipo VALUES(default, '" + tipo + "','" + marca + "', '" + modelo + "','" + detalles + "', '" + motivo + "', '" + estado + "', '" + diagnostico + "', '" + articulos + "', (SELECT  idCliente FROM cliente ORDER BY idCliente DESC LIMIT 1))";
             // aqui toma de la clase de la conexion a la base de datos un objeto y su metodo
             MySqlConnection conexionbd = BD.Conexion();
             conexionbd.Open();
