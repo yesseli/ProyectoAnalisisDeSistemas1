@@ -30,6 +30,13 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelchilero1 = new interfazServicios.Panelchilero();
+            this.Ticket = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtDetalles = new System.Windows.Forms.RichTextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtModelo = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.txtArticulos = new System.Windows.Forms.RichTextBox();
             this.txtMotivo = new System.Windows.Forms.RichTextBox();
@@ -45,10 +52,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.PictureBox();
-            this.txtModelo = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtDetalles = new System.Windows.Forms.RichTextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.panel1.SuspendLayout();
             this.panelchilero1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -73,6 +77,9 @@
             this.panelchilero1.BackColor = System.Drawing.Color.White;
             this.panelchilero1.ColorDeAbajo = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(254)))), ((int)(((byte)(245)))));
             this.panelchilero1.Colordearriba1 = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.panelchilero1.Controls.Add(this.Ticket);
+            this.panelchilero1.Controls.Add(this.label8);
+            this.panelchilero1.Controls.Add(this.richTextBox1);
             this.panelchilero1.Controls.Add(this.txtDetalles);
             this.panelchilero1.Controls.Add(this.label7);
             this.panelchilero1.Controls.Add(this.label5);
@@ -97,13 +104,87 @@
             this.panelchilero1.Size = new System.Drawing.Size(480, 838);
             this.panelchilero1.TabIndex = 17;
             // 
+            // Ticket
+            // 
+            this.Ticket.BackColor = System.Drawing.Color.SlateGray;
+            this.Ticket.Enabled = false;
+            this.Ticket.Font = new System.Drawing.Font("Product Sans", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.Ticket.Location = new System.Drawing.Point(185, 710);
+            this.Ticket.Name = "Ticket";
+            this.Ticket.Size = new System.Drawing.Size(122, 102);
+            this.Ticket.TabIndex = 30;
+            this.Ticket.Text = "Ticket";
+            this.Ticket.UseVisualStyleBackColor = false;
+            this.Ticket.Click += new System.EventHandler(this.Ticket_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Product Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(194)))), ((int)(((byte)(255)))));
+            this.label8.Location = new System.Drawing.Point(313, 708);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(111, 25);
+            this.label8.TabIndex = 29;
+            this.label8.Text = "N u m e r o:";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Font = new System.Drawing.Font("Product Sans", 29.95F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.richTextBox1.Location = new System.Drawing.Point(313, 736);
+            this.richTextBox1.Multiline = false;
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(106, 76);
+            this.richTextBox1.TabIndex = 28;
+            this.richTextBox1.Text = "";
+            // 
+            // txtDetalles
+            // 
+            this.txtDetalles.Location = new System.Drawing.Point(58, 284);
+            this.txtDetalles.Name = "txtDetalles";
+            this.txtDetalles.Size = new System.Drawing.Size(361, 74);
+            this.txtDetalles.TabIndex = 27;
+            this.txtDetalles.Text = "";
+            this.txtDetalles.TextChanged += new System.EventHandler(this.txtDetalles_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Product Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(194)))), ((int)(((byte)(255)))));
+            this.label7.Location = new System.Drawing.Point(58, 247);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(87, 25);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "Detalles";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Product Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(194)))), ((int)(((byte)(255)))));
+            this.label5.Location = new System.Drawing.Point(59, 159);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(81, 25);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "Modelo";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // txtModelo
+            // 
+            this.txtModelo.Location = new System.Drawing.Point(58, 195);
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.PlaceholderText = "Ej. 15-cs0087fl";
+            this.txtModelo.Size = new System.Drawing.Size(157, 27);
+            this.txtModelo.TabIndex = 24;
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(207)))), ((int)(((byte)(252)))));
             this.button3.Font = new System.Drawing.Font("Product Sans", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.button3.Location = new System.Drawing.Point(58, 710);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(362, 102);
+            this.button3.Size = new System.Drawing.Size(122, 102);
             this.button3.TabIndex = 23;
             this.button3.Text = "Registrar";
             this.button3.UseVisualStyleBackColor = false;
@@ -163,6 +244,7 @@
             this.txtTipo.PlaceholderText = "Ej. Impresora";
             this.txtTipo.Size = new System.Drawing.Size(156, 27);
             this.txtTipo.TabIndex = 12;
+            this.txtTipo.TextChanged += new System.EventHandler(this.txtTipo_TextChanged);
             // 
             // label3
             // 
@@ -245,46 +327,6 @@
             this.btnVolver.TabStop = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // txtModelo
-            // 
-            this.txtModelo.Location = new System.Drawing.Point(58, 195);
-            this.txtModelo.Name = "txtModelo";
-            this.txtModelo.PlaceholderText = "Ej. 15-cs0087fl";
-            this.txtModelo.Size = new System.Drawing.Size(157, 27);
-            this.txtModelo.TabIndex = 24;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Product Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(194)))), ((int)(((byte)(255)))));
-            this.label5.Location = new System.Drawing.Point(59, 159);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 25);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "Modelo";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // txtDetalles
-            // 
-            this.txtDetalles.Location = new System.Drawing.Point(58, 284);
-            this.txtDetalles.Name = "txtDetalles";
-            this.txtDetalles.Size = new System.Drawing.Size(361, 74);
-            this.txtDetalles.TabIndex = 27;
-            this.txtDetalles.Text = "";
-            this.txtDetalles.TextChanged += new System.EventHandler(this.txtDetalles_TextChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Product Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(194)))), ((int)(((byte)(255)))));
-            this.label7.Location = new System.Drawing.Point(58, 247);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 25);
-            this.label7.TabIndex = 26;
-            this.label7.Text = "Detalles";
-            // 
             // formServicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -330,5 +372,9 @@
         private TextBox txtModelo;
         private RichTextBox txtDetalles;
         private Label label7;
+        private Label label8;
+        private RichTextBox richTextBox1;
+        private Button Ticket;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

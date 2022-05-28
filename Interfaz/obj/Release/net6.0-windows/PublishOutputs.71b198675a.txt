@@ -1,0 +1,15 @@
+C:\Users\PAVILION\Downloads\interfazServicios.exe
+C:\Users\PAVILION\Downloads\interfazServicios.dll
+C:\Users\PAVILION\Downloads\interfazServicios.deps.json
+C:\Users\PAVILION\Downloads\interfazServicios.runtimeconfig.json
+C:\Users\PAVILION\Downloads\interfazServicios.pdb
+C:\Users\PAVILION\Downloads\BouncyCastle.Crypto.dll
+C:\Users\PAVILION\Downloads\Google.Protobuf.dll
+C:\Users\PAVILION\Downloads\K4os.Compression.LZ4.dll
+C:\Users\PAVILION\Downloads\K4os.Compression.LZ4.Streams.dll
+C:\Users\PAVILION\Downloads\K4os.Hash.xxHash.dll
+C:\Users\PAVILION\Downloads\MySql.Data.dll
+C:\Users\PAVILION\Downloads\Ubiety.Dns.Core.dll
+C:\Users\PAVILION\Downloads\ZstdNet.dll
+C:\Users\PAVILION\Downloads\MySql.Web.dll
+C:\Users\PAVILION\Downloads\MySql.Web.xml

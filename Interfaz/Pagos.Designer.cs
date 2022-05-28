@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnVolver = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -35,8 +36,9 @@
             this.panelchilero1 = new interfazServicios.Panelchilero();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNumeroEquipo = new System.Windows.Forms.TextBox();
             this.panelchilero2 = new interfazServicios.Panelchilero();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.panelchilero3 = new interfazServicios.Panelchilero();
             this.label8 = new System.Windows.Forms.Label();
@@ -48,15 +50,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panelchilero1.SuspendLayout();
             this.panelchilero2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelchilero3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,7 +116,7 @@
             this.panelchilero1.Colordearriba1 = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(254)))), ((int)(((byte)(247)))));
             this.panelchilero1.Controls.Add(this.button1);
             this.panelchilero1.Controls.Add(this.label2);
-            this.panelchilero1.Controls.Add(this.textBox1);
+            this.panelchilero1.Controls.Add(this.txtNumeroEquipo);
             this.panelchilero1.Degradado = 90F;
             this.panelchilero1.ForeColor = System.Drawing.Color.Black;
             this.panelchilero1.Location = new System.Drawing.Point(55, 80);
@@ -132,6 +135,7 @@
             this.button1.TabIndex = 21;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -145,19 +149,20 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Numero Equipo";
             // 
-            // textBox1
+            // txtNumeroEquipo
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(29, 76);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(311, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtNumeroEquipo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNumeroEquipo.Location = new System.Drawing.Point(29, 76);
+            this.txtNumeroEquipo.Name = "txtNumeroEquipo";
+            this.txtNumeroEquipo.Size = new System.Drawing.Size(311, 20);
+            this.txtNumeroEquipo.TabIndex = 0;
             // 
             // panelchilero2
             // 
             this.panelchilero2.BackColor = System.Drawing.Color.White;
             this.panelchilero2.ColorDeAbajo = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.panelchilero2.Colordearriba1 = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(233)))), ((int)(((byte)(255)))));
+            this.panelchilero2.Controls.Add(this.dataGridView1);
             this.panelchilero2.Controls.Add(this.label7);
             this.panelchilero2.Controls.Add(this.panelchilero3);
             this.panelchilero2.Controls.Add(this.button2);
@@ -168,7 +173,6 @@
             this.panelchilero2.Controls.Add(this.label5);
             this.panelchilero2.Controls.Add(this.label4);
             this.panelchilero2.Controls.Add(this.richTextBox1);
-            this.panelchilero2.Controls.Add(this.richTextBox5);
             this.panelchilero2.Controls.Add(this.label3);
             this.panelchilero2.Controls.Add(this.richTextBox3);
             this.panelchilero2.Controls.Add(this.textBox2);
@@ -179,6 +183,19 @@
             this.panelchilero2.Radiodelborde = 100;
             this.panelchilero2.Size = new System.Drawing.Size(374, 496);
             this.panelchilero2.TabIndex = 22;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.Color.White;
+            this.dataGridView1.Location = new System.Drawing.Point(34, 79);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 29;
+            this.dataGridView1.Size = new System.Drawing.Size(306, 166);
+            this.dataGridView1.TabIndex = 30;
             // 
             // label7
             // 
@@ -205,6 +222,7 @@
             this.panelchilero3.Radiodelborde = 30;
             this.panelchilero3.Size = new System.Drawing.Size(94, 40);
             this.panelchilero3.TabIndex = 28;
+            this.panelchilero3.Paint += new System.Windows.Forms.PaintEventHandler(this.panelchilero3_Paint);
             // 
             // label8
             // 
@@ -227,24 +245,27 @@
             this.button2.TabIndex = 27;
             this.button2.Text = "Entregado";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox5
             // 
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.CausesValidation = false;
             this.textBox5.Location = new System.Drawing.Point(179, 45);
             this.textBox5.Name = "textBox5";
+            this.textBox5.PlaceholderText = "Cliente nombre";
             this.textBox5.Size = new System.Drawing.Size(162, 20);
             this.textBox5.TabIndex = 26;
-            this.textBox5.Text = "Cliente nombre";
             // 
             // richTextBox2
             // 
             this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox2.Location = new System.Drawing.Point(247, 338);
+            this.richTextBox2.Font = new System.Drawing.Font("Product Sans", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.richTextBox2.Location = new System.Drawing.Point(202, 338);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(94, 29);
+            this.richTextBox2.Size = new System.Drawing.Size(139, 29);
             this.richTextBox2.TabIndex = 25;
-            this.richTextBox2.Text = "";
+            this.richTextBox2.Text = "Q0.00";
             // 
             // label6
             // 
@@ -298,16 +319,7 @@
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(94, 29);
             this.richTextBox1.TabIndex = 20;
-            this.richTextBox1.Text = "";
-            // 
-            // richTextBox5
-            // 
-            this.richTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox5.Location = new System.Drawing.Point(34, 71);
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.Size = new System.Drawing.Size(307, 174);
-            this.richTextBox5.TabIndex = 18;
-            this.richTextBox5.Text = "Insumo #1 Precio Q10";
+            this.richTextBox1.Text = "0.00";
             // 
             // label3
             // 
@@ -328,16 +340,22 @@
             this.richTextBox3.Name = "richTextBox3";
             this.richTextBox3.Size = new System.Drawing.Size(94, 29);
             this.richTextBox3.TabIndex = 16;
-            this.richTextBox3.Text = "";
+            this.richTextBox3.Text = "0.00";
             // 
             // textBox2
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Location = new System.Drawing.Point(34, 45);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PlaceholderText = "NO. Equipo";
             this.textBox2.Size = new System.Drawing.Size(139, 20);
             this.textBox2.TabIndex = 8;
-            this.textBox2.Text = "Numero Equipo";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FormPago
             // 
@@ -360,6 +378,7 @@
             this.panelchilero1.PerformLayout();
             this.panelchilero2.ResumeLayout(false);
             this.panelchilero2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panelchilero3.ResumeLayout(false);
             this.panelchilero3.PerformLayout();
             this.ResumeLayout(false);
@@ -372,11 +391,10 @@
         private Label label1;
         private PictureBox pictureBox4;
         private Panelchilero panelchilero1;
-        private TextBox textBox1;
+        private TextBox txtNumeroEquipo;
         private Label label2;
         private Button button1;
         private Panelchilero panelchilero2;
-        private RichTextBox richTextBox5;
         private Label label3;
         private RichTextBox richTextBox3;
         private TextBox textBox2;
@@ -391,5 +409,7 @@
         private Button button2;
         private Label label7;
         private Label label8;
+        private DataGridView dataGridView1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

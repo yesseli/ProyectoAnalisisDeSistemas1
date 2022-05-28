@@ -28,10 +28,7 @@ C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\bin\Debug\ne
 C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\bin\Debug\net6.0-windows\interfazServicios.pdb
 C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\obj\Debug\net6.0-windows\interfazServicios.csproj.AssemblyReference.cache
 C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\obj\Debug\net6.0-windows\interfazServicios.Form1.resources
-C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\obj\Debug\net6.0-windows\interfazServicios.formCliente.resources
 C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\obj\Debug\net6.0-windows\interfazServicios.formServicio.resources
-C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\obj\Debug\net6.0-windows\interfazServicios.FormEquipo.resources
-C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\obj\Debug\net6.0-windows\interfazServicios.FormIsumo.resources
 C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\obj\Debug\net6.0-windows\interfazServicios.FormPago.resources
 C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\obj\Debug\net6.0-windows\interfazServicios.Properties.Resources.resources
 C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\obj\Debug\net6.0-windows\interfazServicios.csproj.GenerateResource.cache
@@ -78,7 +75,6 @@ C:\Users\rafae\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\bin\Debug\net6.
 C:\Users\rafae\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\bin\Debug\net6.0-windows\K4os.Hash.xxHash.dll
 C:\Users\rafae\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\bin\Debug\net6.0-windows\MySql.Data.xml
 C:\Users\rafae\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\obj\Debug\net6.0-windows\interfazServicios.csproj.CopyComplete
-C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\obj\Debug\net6.0-windows\interfazServicios.Form3.resources
 C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
 C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\bin\Debug\net6.0-windows\Google.Protobuf.dll
 C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\bin\Debug\net6.0-windows\K4os.Compression.LZ4.dll
@@ -90,3 +86,6 @@ C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\bin\Debug\ne
 C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\bin\Debug\net6.0-windows\MySql.Web.dll
 C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\bin\Debug\net6.0-windows\MySql.Web.xml
 C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\obj\Debug\net6.0-windows\interfazServicios.csproj.CopyComplete
+C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\obj\Debug\net6.0-windows\interfazServicios.Equipo.resources
+C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\obj\Debug\net6.0-windows\interfazServicios.Form2.resources
+C:\Users\PAVILION\source\repos\ProyectoAnalisisDeSistemas1\Interfaz\obj\Debug\net6.0-windows\interfazServicios.PantallaPrincipal.resources

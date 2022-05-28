@@ -1,202 +1,98 @@
-using System.Runtime.InteropServices;
+ï»¿using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace interfazServicios
 {
-    public partial class form1 : Form
+    public partial class Form1 : Form
     {
-        public form1()
+        public Form1()
         {
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void lblTitulo_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-                 }
+            String nombreCliente = txtNombreCliente.Text;
+            String tipo = txtTipo.Text;
+            String marca = txtMarca.Text;
+            String modelo = txtModelo.Text;
+            String detalles = txtDetalles.Text;
+            String motivo = txtMotivo.Text;
+            String numero = txtNumero.Text;
+            String articulos = txtArticulos.Text;
+            String estado = "Almacenado";
+            String diagnostico = "NULL";
+            String nEquipo = textBox1.Text;
+            String querySQL1 = "USE larousee; UPDATE equipo SET tipoEquipo= '" + tipo + "', Marca ='" + marca + "', modelo =  '" + modelo + "', detalles = '" + detalles + "', descripcionProblema ='" + motivo + "', estado = '" + estado + "', diagnostico = '" + diagnostico + "', accesorios = '" + articulos + "' WHERE idEquipo = "+nEquipo+" ";
+            String querySQL2 = "USE larousee; UPDATE cliente JOIN equipo ON cliente_idCliente = idCliente SET nombreCliente= '" + nombreCliente + "', telefono ='" + numero + "' WHERE idEquipo = " + nEquipo + ";";
 
-        private void AbrirFormulario<MiForm>() where MiForm : Form, new()
-        {
-            Form formulario;
-            formulario = panelFormularios.Controls.OfType<MiForm>().FirstOrDefault();//Busca en la colecion el formulario
-                                                                                     //si el formulario/instancia no existe
-            if (formulario == null)
+            MySqlConnection conexionbd = BD.Conexion();
+            conexionbd.Open();
+            MySqlConnection conexionbd1 = BD.Conexion();
+            conexionbd1.Open();
+
+
+            try
             {
-                formulario = new MiForm();
-                formulario.TopLevel = false;
-                formulario.FormBorderStyle = FormBorderStyle.None;
-                formulario.Dock = DockStyle.Fill;
-                panelFormularios.Controls.Add(formulario);
-                panelFormularios.Tag = formulario;
-               // formulario.Show();
-                formulario.BringToFront();
-                formulario.FormClosed += new FormClosedEventHandler(CloseForms);
-                formulario.Show();
+                MySqlCommand comando = new MySqlCommand(querySQL1, conexionbd);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Equipo Editado");
+
+                
+
             }
-            //si el formulario/instancia existe
-            else
+            catch (MySqlException ex)
             {
-                formulario.BringToFront();
+                MessageBox.Show("Error al editar equipo " + ex.Message);
             }
-        }
-
-        private void CloseForms(object sender, FormClosedEventArgs e){
-           // if (Application.OpenForms["Form2"] == null)
-                //btnFormCliente.BackColor = Color.Transparent;
-        }
-
-        private void panelContenedor_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        #region Funcionalidades del formulario
-        //RESIZE METODO PARA REDIMENCIONAR/CAMBIAR TAMAÑO A FORMULARIO EN TIEMPO DE EJECUCION ----------------------------------------------------------
-        private int tolerance = 12;
-        private const int WM_NCHITTEST = 132;
-        private const int HTBOTTOMRIGHT = 17;
-        private Rectangle sizeGripRectangle;
-        protected override void WndProc(ref Message m)
-        {
-            switch (m.Msg)
+            finally
             {
-                case WM_NCHITTEST:
-                    base.WndProc(ref m);
-                    var hitPoint = this.PointToClient(new Point(m.LParam.ToInt32() & 0xffff, m.LParam.ToInt32() >> 16));
-                    if (sizeGripRectangle.Contains(hitPoint))
-                        m.Result = new IntPtr(HTBOTTOMRIGHT);
-                    break;
-                default:
-                    base.WndProc(ref m);
-                    break;
+                conexionbd.Close();
             }
-        }
-        //----------------DIBUJAR RECTANGULO / EXCLUIR ESQUINA PANEL 
-        protected override void OnSizeChanged(EventArgs e)
-        {
-            base.OnSizeChanged(e);
-            var region = new Region(new Rectangle(0, 0, this.ClientRectangle.Width, this.ClientRectangle.Height));
-            sizeGripRectangle = new Rectangle(this.ClientRectangle.Width - tolerance, this.ClientRectangle.Height - tolerance, tolerance, tolerance);
-            region.Exclude(sizeGripRectangle);
-            this.panelContenedor.Region = region;
-            this.Invalidate();
-        }
-        //----------------COLOR Y GRIP DE RECTANGULO INFERIOR
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            SolidBrush blueBrush = new SolidBrush(Color.FromArgb(244, 244, 244));
-            e.Graphics.FillRectangle(blueBrush, sizeGripRectangle);
-            /*base.OnPaint(e);
-            ControlPaint.DrawSizeGrip(e.Graphics, Color.Transparent, sizeGripRectangle);*/
-        }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();        }
-        int lx, ly;
-        int sw, sh;
+            try
+            {
+                MySqlCommand comando1 = new MySqlCommand(querySQL2, conexionbd1);
+                comando1.ExecuteNonQuery();
+                MessageBox.Show("Cliente Editado");
 
-        private void btnMinimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
 
-        private void btnRestaurar_Click(object sender, EventArgs e)
-        {
-            btnMaximizar.Visible = true;
-            btnRestaurar.Visible = false;
-            this.Size = new Size(sw, sh);
-            this.Location = new Point(lx, ly);
-        }
 
-        private void btnMaximizar_Click(object sender, EventArgs e)
-        {
-            lx = this.Location.X;
-            ly = this.Location.Y;
-            sw = this.Size.Width;
-            sh = this.Size.Height;
-            btnMaximizar.Visible = false;
-            btnRestaurar.Visible = true;
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-            this.Location=Screen.PrimaryScreen.WorkingArea.Location;
-        }
-
-        private void panelBarraTitulo_MouseMove(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void btnFormCliente_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<formCliente>();
-           // btnFormCliente.BackColor = Color.FromArgb(33,85,205);
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Error al editar cliente " + ex.Message);
+            }
+            finally
+            {
+                conexionbd.Close();
+            }
 
         }
 
-        private void btnEquipo_Click(object sender, EventArgs e)
+        private void btnVolver_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<Form3>();
-            btnEquipo.BackColor = Color.FromArgb(33, 85, 205);
-            Size = new Size(965, 732);
-            this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
-                          (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
-        }
 
-        private void btnServicio_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<formServicio>();
-            btnServicio.BackColor = Color.FromArgb(33, 85, 205);
-            Size = new Size(568, 915);
-            this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
-                          (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
-
-
-
-
-           // this.Hide();
-          //  var formServicio = new formServicio();
-            //formServicio.Closed += (s, args) => this.Close();
-           // formServicio.Show();
-        }
-
-        private void btnInsumo_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<FormIsumo>();
-            //btnInsumo.BackColor = Color.FromArgb(33, 85, 205);
-        }
-
-        private void btnPago_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<FormPago>();
-            btnPago.BackColor = Color.FromArgb(33, 85, 205);
-            Size = new Size(497, 826);
+            this.Close();
+            // form1 form = new form1();
+            //  form.Size = new Size(712, 468);
+            // form.Show();
             this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
                                (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
+            this.Size = new Size(712, 468);
         }
-
-        private void panelFormularios_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panelFormularios_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        #endregion
     }
 }
